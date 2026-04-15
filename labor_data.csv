@@ -1,0 +1,215 @@
+date,series_id,series_name,value
+2024-01-01,CES0000000001,Total Nonfarm Employment,157032.0
+2024-02-01,CES0000000001,Total Nonfarm Employment,157238.0
+2024-03-01,CES0000000001,Total Nonfarm Employment,157466.0
+2024-04-01,CES0000000001,Total Nonfarm Employment,157530.0
+2024-05-01,CES0000000001,Total Nonfarm Employment,157608.0
+2024-06-01,CES0000000001,Total Nonfarm Employment,157695.0
+2024-07-01,CES0000000001,Total Nonfarm Employment,157748.0
+2024-08-01,CES0000000001,Total Nonfarm Employment,157757.0
+2024-09-01,CES0000000001,Total Nonfarm Employment,157912.0
+2024-10-01,CES0000000001,Total Nonfarm Employment,157945.0
+2024-11-01,CES0000000001,Total Nonfarm Employment,158079.0
+2024-12-01,CES0000000001,Total Nonfarm Employment,158316.0
+2025-01-01,CES0000000001,Total Nonfarm Employment,158268.0
+2025-02-01,CES0000000001,Total Nonfarm Employment,158310.0
+2025-03-01,CES0000000001,Total Nonfarm Employment,158377.0
+2025-04-01,CES0000000001,Total Nonfarm Employment,158485.0
+2025-05-01,CES0000000001,Total Nonfarm Employment,158498.0
+2025-06-01,CES0000000001,Total Nonfarm Employment,158478.0
+2025-07-01,CES0000000001,Total Nonfarm Employment,158542.0
+2025-08-01,CES0000000001,Total Nonfarm Employment,158472.0
+2025-09-01,CES0000000001,Total Nonfarm Employment,158548.0
+2025-10-01,CES0000000001,Total Nonfarm Employment,158408.0
+2025-11-01,CES0000000001,Total Nonfarm Employment,158449.0
+2025-12-01,CES0000000001,Total Nonfarm Employment,158432.0
+2026-01-01,CES0000000001,Total Nonfarm Employment,158592.0
+2026-02-01,CES0000000001,Total Nonfarm Employment,158459.0
+2026-03-01,CES0000000001,Total Nonfarm Employment,158637.0
+2024-01-01,CES0500000002,Avg Weekly Hours,34.2
+2024-02-01,CES0500000002,Avg Weekly Hours,34.4
+2024-03-01,CES0500000002,Avg Weekly Hours,34.4
+2024-04-01,CES0500000002,Avg Weekly Hours,34.2
+2024-05-01,CES0500000002,Avg Weekly Hours,34.3
+2024-06-01,CES0500000002,Avg Weekly Hours,34.3
+2024-07-01,CES0500000002,Avg Weekly Hours,34.2
+2024-08-01,CES0500000002,Avg Weekly Hours,34.3
+2024-09-01,CES0500000002,Avg Weekly Hours,34.3
+2024-10-01,CES0500000002,Avg Weekly Hours,34.2
+2024-11-01,CES0500000002,Avg Weekly Hours,34.3
+2024-12-01,CES0500000002,Avg Weekly Hours,34.3
+2025-01-01,CES0500000002,Avg Weekly Hours,34.1
+2025-02-01,CES0500000002,Avg Weekly Hours,34.2
+2025-03-01,CES0500000002,Avg Weekly Hours,34.2
+2025-04-01,CES0500000002,Avg Weekly Hours,34.3
+2025-05-01,CES0500000002,Avg Weekly Hours,34.2
+2025-06-01,CES0500000002,Avg Weekly Hours,34.2
+2025-07-01,CES0500000002,Avg Weekly Hours,34.2
+2025-08-01,CES0500000002,Avg Weekly Hours,34.2
+2025-09-01,CES0500000002,Avg Weekly Hours,34.2
+2025-10-01,CES0500000002,Avg Weekly Hours,34.2
+2025-11-01,CES0500000002,Avg Weekly Hours,34.3
+2025-12-01,CES0500000002,Avg Weekly Hours,34.2
+2026-01-01,CES0500000002,Avg Weekly Hours,34.3
+2026-02-01,CES0500000002,Avg Weekly Hours,34.3
+2026-03-01,CES0500000002,Avg Weekly Hours,34.2
+2024-01-01,CES0500000003,Avg Hourly Earnings,34.47
+2024-02-01,CES0500000003,Avg Hourly Earnings,34.52
+2024-03-01,CES0500000003,Avg Hourly Earnings,34.65
+2024-04-01,CES0500000003,Avg Hourly Earnings,34.76
+2024-05-01,CES0500000003,Avg Hourly Earnings,34.89
+2024-06-01,CES0500000003,Avg Hourly Earnings,35.01
+2024-07-01,CES0500000003,Avg Hourly Earnings,35.08
+2024-08-01,CES0500000003,Avg Hourly Earnings,35.22
+2024-09-01,CES0500000003,Avg Hourly Earnings,35.34
+2024-10-01,CES0500000003,Avg Hourly Earnings,35.46
+2024-11-01,CES0500000003,Avg Hourly Earnings,35.6
+2024-12-01,CES0500000003,Avg Hourly Earnings,35.69
+2025-01-01,CES0500000003,Avg Hourly Earnings,35.84
+2025-02-01,CES0500000003,Avg Hourly Earnings,35.94
+2025-03-01,CES0500000003,Avg Hourly Earnings,36.11
+2025-04-01,CES0500000003,Avg Hourly Earnings,36.12
+2025-05-01,CES0500000003,Avg Hourly Earnings,36.28
+2025-06-01,CES0500000003,Avg Hourly Earnings,36.36
+2025-07-01,CES0500000003,Avg Hourly Earnings,36.47
+2025-08-01,CES0500000003,Avg Hourly Earnings,36.62
+2025-09-01,CES0500000003,Avg Hourly Earnings,36.7
+2025-10-01,CES0500000003,Avg Hourly Earnings,36.85
+2025-11-01,CES0500000003,Avg Hourly Earnings,37.0
+2025-12-01,CES0500000003,Avg Hourly Earnings,37.02
+2026-01-01,CES0500000003,Avg Hourly Earnings,37.15
+2026-02-01,CES0500000003,Avg Hourly Earnings,37.29
+2026-03-01,CES0500000003,Avg Hourly Earnings,37.38
+2024-01-01,CES2000000001,Construction Employment,8123.0
+2024-02-01,CES2000000001,Construction Employment,8132.0
+2024-03-01,CES2000000001,Construction Employment,8164.0
+2024-04-01,CES2000000001,Construction Employment,8170.0
+2024-05-01,CES2000000001,Construction Employment,8176.0
+2024-06-01,CES2000000001,Construction Employment,8196.0
+2024-07-01,CES2000000001,Construction Employment,8208.0
+2024-08-01,CES2000000001,Construction Employment,8236.0
+2024-09-01,CES2000000001,Construction Employment,8254.0
+2024-10-01,CES2000000001,Construction Employment,8262.0
+2024-11-01,CES2000000001,Construction Employment,8267.0
+2024-12-01,CES2000000001,Construction Employment,8276.0
+2025-01-01,CES2000000001,Construction Employment,8264.0
+2025-02-01,CES2000000001,Construction Employment,8267.0
+2025-03-01,CES2000000001,Construction Employment,8273.0
+2025-04-01,CES2000000001,Construction Employment,8271.0
+2025-05-01,CES2000000001,Construction Employment,8269.0
+2025-06-01,CES2000000001,Construction Employment,8267.0
+2025-07-01,CES2000000001,Construction Employment,8261.0
+2025-08-01,CES2000000001,Construction Employment,8239.0
+2025-09-01,CES2000000001,Construction Employment,8255.0
+2025-10-01,CES2000000001,Construction Employment,8243.0
+2025-11-01,CES2000000001,Construction Employment,8279.0
+2025-12-01,CES2000000001,Construction Employment,8272.0
+2026-01-01,CES2000000001,Construction Employment,8317.0
+2026-02-01,CES2000000001,Construction Employment,8304.0
+2026-03-01,CES2000000001,Construction Employment,8330.0
+2024-01-01,CES3000000001,Manufacturing Employment,12875.0
+2024-02-01,CES3000000001,Manufacturing Employment,12852.0
+2024-03-01,CES3000000001,Manufacturing Employment,12836.0
+2024-04-01,CES3000000001,Manufacturing Employment,12833.0
+2024-05-01,CES3000000001,Manufacturing Employment,12825.0
+2024-06-01,CES3000000001,Manufacturing Employment,12814.0
+2024-07-01,CES3000000001,Manufacturing Employment,12806.0
+2024-08-01,CES3000000001,Manufacturing Employment,12772.0
+2024-09-01,CES3000000001,Manufacturing Employment,12758.0
+2024-10-01,CES3000000001,Manufacturing Employment,12697.0
+2024-11-01,CES3000000001,Manufacturing Employment,12711.0
+2024-12-01,CES3000000001,Manufacturing Employment,12693.0
+2025-01-01,CES3000000001,Manufacturing Employment,12673.0
+2025-02-01,CES3000000001,Manufacturing Employment,12671.0
+2025-03-01,CES3000000001,Manufacturing Employment,12666.0
+2025-04-01,CES3000000001,Manufacturing Employment,12662.0
+2025-05-01,CES3000000001,Manufacturing Employment,12651.0
+2025-06-01,CES3000000001,Manufacturing Employment,12636.0
+2025-07-01,CES3000000001,Manufacturing Employment,12625.0
+2025-08-01,CES3000000001,Manufacturing Employment,12615.0
+2025-09-01,CES3000000001,Manufacturing Employment,12612.0
+2025-10-01,CES3000000001,Manufacturing Employment,12603.0
+2025-11-01,CES3000000001,Manufacturing Employment,12593.0
+2025-12-01,CES3000000001,Manufacturing Employment,12580.0
+2026-01-01,CES3000000001,Manufacturing Employment,12582.0
+2026-02-01,CES3000000001,Manufacturing Employment,12576.0
+2026-03-01,CES3000000001,Manufacturing Employment,12591.0
+2024-01-01,CES6500000001,Education & Health Employment,26033.0
+2024-02-01,CES6500000001,Education & Health Employment,26130.0
+2024-03-01,CES6500000001,Education & Health Employment,26225.0
+2024-04-01,CES6500000001,Education & Health Employment,26313.0
+2024-05-01,CES6500000001,Education & Health Employment,26383.0
+2024-06-01,CES6500000001,Education & Health Employment,26474.0
+2024-07-01,CES6500000001,Education & Health Employment,26515.0
+2024-08-01,CES6500000001,Education & Health Employment,26573.0
+2024-09-01,CES6500000001,Education & Health Employment,26691.0
+2024-10-01,CES6500000001,Education & Health Employment,26786.0
+2024-11-01,CES6500000001,Education & Health Employment,26870.0
+2024-12-01,CES6500000001,Education & Health Employment,26945.0
+2025-01-01,CES6500000001,Education & Health Employment,27006.0
+2025-02-01,CES6500000001,Education & Health Employment,27064.0
+2025-03-01,CES6500000001,Education & Health Employment,27132.0
+2025-04-01,CES6500000001,Education & Health Employment,27216.0
+2025-05-01,CES6500000001,Education & Health Employment,27276.0
+2025-06-01,CES6500000001,Education & Health Employment,27325.0
+2025-07-01,CES6500000001,Education & Health Employment,27412.0
+2025-08-01,CES6500000001,Education & Health Employment,27435.0
+2025-09-01,CES6500000001,Education & Health Employment,27489.0
+2025-10-01,CES6500000001,Education & Health Employment,27533.0
+2025-11-01,CES6500000001,Education & Health Employment,27589.0
+2025-12-01,CES6500000001,Education & Health Employment,27627.0
+2026-01-01,CES6500000001,Education & Health Employment,27746.0
+2026-02-01,CES6500000001,Education & Health Employment,27704.0
+2026-03-01,CES6500000001,Education & Health Employment,27795.0
+2024-01-01,LNS11300000,Labor Force Participation Rate,62.5
+2024-02-01,LNS11300000,Labor Force Participation Rate,62.6
+2024-03-01,LNS11300000,Labor Force Participation Rate,62.7
+2024-04-01,LNS11300000,Labor Force Participation Rate,62.6
+2024-05-01,LNS11300000,Labor Force Participation Rate,62.6
+2024-06-01,LNS11300000,Labor Force Participation Rate,62.6
+2024-07-01,LNS11300000,Labor Force Participation Rate,62.7
+2024-08-01,LNS11300000,Labor Force Participation Rate,62.7
+2024-09-01,LNS11300000,Labor Force Participation Rate,62.7
+2024-10-01,LNS11300000,Labor Force Participation Rate,62.5
+2024-11-01,LNS11300000,Labor Force Participation Rate,62.4
+2024-12-01,LNS11300000,Labor Force Participation Rate,62.5
+2025-01-01,LNS11300000,Labor Force Participation Rate,62.6
+2025-02-01,LNS11300000,Labor Force Participation Rate,62.5
+2025-03-01,LNS11300000,Labor Force Participation Rate,62.5
+2025-04-01,LNS11300000,Labor Force Participation Rate,62.6
+2025-05-01,LNS11300000,Labor Force Participation Rate,62.4
+2025-06-01,LNS11300000,Labor Force Participation Rate,62.3
+2025-07-01,LNS11300000,Labor Force Participation Rate,62.2
+2025-08-01,LNS11300000,Labor Force Participation Rate,62.3
+2025-09-01,LNS11300000,Labor Force Participation Rate,62.5
+2025-11-01,LNS11300000,Labor Force Participation Rate,62.5
+2025-12-01,LNS11300000,Labor Force Participation Rate,62.4
+2026-01-01,LNS11300000,Labor Force Participation Rate,62.1
+2026-02-01,LNS11300000,Labor Force Participation Rate,62.0
+2026-03-01,LNS11300000,Labor Force Participation Rate,61.9
+2024-01-01,LNS14000000,Unemployment Rate,3.7
+2024-02-01,LNS14000000,Unemployment Rate,3.9
+2024-03-01,LNS14000000,Unemployment Rate,3.9
+2024-04-01,LNS14000000,Unemployment Rate,3.9
+2024-05-01,LNS14000000,Unemployment Rate,3.9
+2024-06-01,LNS14000000,Unemployment Rate,4.1
+2024-07-01,LNS14000000,Unemployment Rate,4.2
+2024-08-01,LNS14000000,Unemployment Rate,4.2
+2024-09-01,LNS14000000,Unemployment Rate,4.1
+2024-10-01,LNS14000000,Unemployment Rate,4.1
+2024-11-01,LNS14000000,Unemployment Rate,4.2
+2024-12-01,LNS14000000,Unemployment Rate,4.1
+2025-01-01,LNS14000000,Unemployment Rate,4.0
+2025-02-01,LNS14000000,Unemployment Rate,4.2
+2025-03-01,LNS14000000,Unemployment Rate,4.2
+2025-04-01,LNS14000000,Unemployment Rate,4.2
+2025-05-01,LNS14000000,Unemployment Rate,4.3
+2025-06-01,LNS14000000,Unemployment Rate,4.1
+2025-07-01,LNS14000000,Unemployment Rate,4.3
+2025-08-01,LNS14000000,Unemployment Rate,4.3
+2025-09-01,LNS14000000,Unemployment Rate,4.4
+2025-11-01,LNS14000000,Unemployment Rate,4.5
+2025-12-01,LNS14000000,Unemployment Rate,4.4
+2026-01-01,LNS14000000,Unemployment Rate,4.3
+2026-02-01,LNS14000000,Unemployment Rate,4.4
+2026-03-01,LNS14000000,Unemployment Rate,4.3
