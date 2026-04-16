@@ -44,13 +44,14 @@ st.subheader("📈 Trends Over Time (Indexed to 100 at Start)")
 st.caption("All series normalized so the first month = 100. Values above 100 mean growth; below 100 means decline.")
 
 # For each series, divide every value by its first value and multiply by 100
-def index_series(group):
-    first_val = group.sort_values("date")["value"].iloc[0]
-    group = group.copy()
+# Normalize each series to 100 at first data point
+indexed_frames = []
+for name, group in filtered.groupby("series_name"):
+    group = group.sort_values("date").copy()
+    first_val = group["value"].iloc[0]
     group["indexed_value"] = (group["value"] / first_val) * 100
-    return group
-
-indexed = filtered.groupby("series_name", group_keys=False).apply(index_series)
+    indexed_frames.append(group)
+indexed = pd.concat(indexed_frames, ignore_index=True)
 
 fig = px.line(
     indexed, x="date", y="indexed_value", color="series_name",
