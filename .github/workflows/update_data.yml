@@ -1,0 +1,39 @@
+name: Monthly BLS Data Update
+
+on:
+  # Run automatically on the 5th of every month at 9am UTC
+  # (BLS releases jobs data on the first Friday, so 5th catches it)
+  schedule:
+    - cron: '0 9 5 * *'
+  # Also allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # Needed to commit updated CSV back to repo
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pandas
+
+      - name: Run data collection script
+        run: python scripts/collect_data.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/labor_data.csv
+          git diff --staged --quiet || git commit -m "Auto-update: BLS data $(date +'%Y-%m')"
+          git push
