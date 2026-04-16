@@ -23,9 +23,9 @@ st.markdown("---")
 st.sidebar.title("Filters")
 all_series = df["series_name"].unique().tolist()
 selected = st.sidebar.multiselect("Series", all_series, default=all_series)
-filtered = df[df["series_name"].isin(selected)]
+filtered = df[df["series_name"].isin(selected)].copy()
 
-# Metric cards
+# ---- Metric Cards ----
 st.subheader("Latest Values")
 latest = df.sort_values("date").groupby("series_name").last().reset_index()
 prev   = df.sort_values("date").groupby("series_name").nth(-2).reset_index()
@@ -39,26 +39,48 @@ for i, row in merged.iterrows():
 
 st.markdown("---")
 
-# Line chart
-st.subheader("Trends Over Time")
-fig = px.line(filtered, x="date", y="value", color="series_name",
-              labels={"value":"Value","date":"Date","series_name":"Series"})
+# ---- Indexed Line Chart (base 100) ----
+st.subheader("📈 Trends Over Time (Indexed to 100 at Start)")
+st.caption("All series normalized so the first month = 100. Values above 100 mean growth; below 100 means decline.")
+
+# For each series, divide every value by its first value and multiply by 100
+def index_series(group):
+    first_val = group.sort_values("date")["value"].iloc[0]
+    group = group.copy()
+    group["indexed_value"] = (group["value"] / first_val) * 100
+    return group
+
+indexed = filtered.groupby("series_name", group_keys=False).apply(index_series)
+
+fig = px.line(
+    indexed, x="date", y="indexed_value", color="series_name",
+    labels={"indexed_value": "Index (First Month = 100)", "date": "Date", "series_name": "Series"},
+)
+fig.add_hline(y=100, line_dash="dash", line_color="gray", opacity=0.5)
 fig.update_layout(legend=dict(orientation="h", yanchor="bottom", y=-0.5))
 st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("---")
 
-# Month-over-month bar chart
-st.subheader("Month-over-Month Change")
+# ---- Month-over-Month % Change Bar Chart ----
+st.subheader("📊 Month-over-Month % Change")
+st.caption("Percentage change from the previous month, making the magnitude of changes comparable across series.")
+
 series_choice = st.selectbox("Select series:", all_series)
-mom = df[df["series_name"]==series_choice].sort_values("date").copy()
-mom["change"] = mom["value"].diff()
-mom = mom.dropna()
-mom["color"] = mom["change"].apply(lambda x: "positive" if x>=0 else "negative")
-fig2 = px.bar(mom, x="date", y="change", color="color",
-              color_discrete_map={"positive":"#2ecc71","negative":"#e74c3c"},
-              title=f"Month-over-Month: {series_choice}")
+mom = df[df["series_name"] == series_choice].sort_values("date").copy()
+mom["pct_change"] = mom["value"].pct_change() * 100  # percentage change
+mom = mom.dropna(subset=["pct_change"])
+mom["color"] = mom["pct_change"].apply(lambda x: "positive" if x >= 0 else "negative")
+
+fig2 = px.bar(
+    mom, x="date", y="pct_change",
+    color="color",
+    color_discrete_map={"positive": "#2ecc71", "negative": "#e74c3c"},
+    title=f"Month-over-Month % Change: {series_choice}",
+    labels={"pct_change": "% Change", "date": "Date"}
+)
 fig2.update_layout(showlegend=False)
+fig2.add_hline(y=0, line_color="gray", opacity=0.5)
 st.plotly_chart(fig2, use_container_width=True)
 
 st.caption(f"Data: {df['date'].min().strftime('%b %Y')} – {df['date'].max().strftime('%b %Y')}")
