@@ -23,7 +23,24 @@ st.markdown("---")
 st.sidebar.title("Filters")
 all_series = df["series_name"].unique().tolist()
 selected = st.sidebar.multiselect("Series", all_series, default=all_series)
-filtered = df[df["series_name"].isin(selected)].copy()
+
+# Date range slider
+min_date = df["date"].min().to_pydatetime()
+max_date = df["date"].max().to_pydatetime()
+start_date, end_date = st.sidebar.slider(
+    "Date Range",
+    min_value=min_date,
+    max_value=max_date,
+    value=(min_date, max_date),
+    format="MMM YYYY"
+)
+
+# Filter data by both series and date range
+filtered = df[
+    (df["series_name"].isin(selected)) &
+    (df["date"] >= start_date) &
+    (df["date"] <= end_date)
+].copy()
 
 # ---- Metric Cards ----
 st.subheader("Latest Values")
