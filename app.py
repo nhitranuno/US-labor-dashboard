@@ -132,7 +132,7 @@ fig2.add_trace(go.Scatter(
     y=mom["rolling_avg"],
     mode="lines",
     name="3-Month Avg",
-    line=dict(color="black", width=2.5, dash="solid")
+    line=dict(color="#FFD700", width=2.5, dash="solid")
 ))
 
 fig2.add_hline(y=0, line_color="gray", opacity=0.4)
