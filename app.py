@@ -163,16 +163,14 @@ positive_months = (mom["pct_change"] > 0).sum()
 negative_months = (mom["pct_change"] < 0).sum()
 
 col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    st.metric("Avg Monthly Change", f"{avg:+.3f}%")
 with col2:
     st.metric("Best Month", f"{best['pct_change']:+.3f}%",
-              best["date"].strftime("%b %Y"))
+              best["date"].strftime("%b %Y"), delta_color="off")
 with col3:
     st.metric("Worst Month", f"{worst['pct_change']:+.3f}%",
-              worst["date"].strftime("%b %Y"))
+              worst["date"].strftime("%b %Y"), delta_color="off")
 with col4:
     st.metric("Total Change", f"{total:+.2f}%",
-              "since Jan 2024")
+              "since Jan 2024", delta_color="off")
 with col5:
     st.metric("Months Up / Down", f"{positive_months} / {negative_months}")
