@@ -75,6 +75,29 @@ fig = px.line(
     labels={"indexed_value": "Index (First Month = 100)", "date": "Date", "series_name": "Series"},
 )
 fig.add_hline(y=100, line_dash="dash", line_color="gray", opacity=0.5)
+
+# Annotate major economic events
+events = [
+    {"date": "2024-09-01", "label": "Fed begins rate cuts", "color": "blue"},
+    {"date": "2025-10-01", "label": "Govt shutdown\n(data gap)", "color": "red"},
+    {"date": "2025-01-01", "label": "Trump 2nd term begins", "color": "gray"},
+]
+for event in events:
+    fig.add_vline(
+        x=event["date"],
+        line_dash="dot",
+        line_color=event["color"],
+        opacity=0.5
+    )
+    fig.add_annotation(
+        x=event["date"],
+        y=103,
+        text=event["label"],
+        showarrow=False,
+        font=dict(size=10, color=event["color"]),
+        textangle=-90,
+        xanchor="left"
+    )
 fig.update_layout(legend=dict(orientation="h", yanchor="bottom", y=-0.5))
 st.plotly_chart(fig, use_container_width=True)
 
