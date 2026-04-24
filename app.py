@@ -175,4 +175,4 @@ with col4:
     st.metric("Total Change", f"{total:+.2f}%",
               "since Jan 2024")
 with col5:
-    st.metric("Months Up / Down", f"{positive_months} / {negative_months}")].max().strftime('%b %Y')}")
+    st.metric("Months Up / Down", f"{positive_months} / {negative_months}")
