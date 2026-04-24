@@ -105,13 +105,18 @@ st.markdown("---")
 
 # ---- Month-over-Month % Change Bar Chart ----
 st.subheader("📊 Month-over-Month % Change")
-st.caption("Percentage change from the previous month, making the magnitude of changes comparable across series.")
+st.caption("Percentage change from the previous month. The black line shows the 3-month rolling average to smooth out noise.")
 
 series_choice = st.selectbox("Select series:", all_series)
 mom = df[df["series_name"] == series_choice].sort_values("date").copy()
-mom["pct_change"] = mom["value"].pct_change() * 100  # percentage change
+mom["pct_change"] = mom["value"].pct_change() * 100
 mom = mom.dropna(subset=["pct_change"])
 mom["color"] = mom["pct_change"].apply(lambda x: "positive" if x >= 0 else "negative")
+
+# 3-month rolling average
+mom["rolling_avg"] = mom["pct_change"].rolling(window=3).mean()
+
+import plotly.graph_objects as go
 
 fig2 = px.bar(
     mom, x="date", y="pct_change",
@@ -120,8 +125,54 @@ fig2 = px.bar(
     title=f"Month-over-Month % Change: {series_choice}",
     labels={"pct_change": "% Change", "date": "Date"}
 )
-fig2.update_layout(showlegend=False)
-fig2.add_hline(y=0, line_color="gray", opacity=0.5)
+
+# Overlay rolling average line
+fig2.add_trace(go.Scatter(
+    x=mom["date"],
+    y=mom["rolling_avg"],
+    mode="lines",
+    name="3-Month Avg",
+    line=dict(color="black", width=2.5, dash="solid")
+))
+
+fig2.add_hline(y=0, line_color="gray", opacity=0.4)
+fig2.update_layout(showlegend=True, legend=dict(orientation="h", y=-0.2))
+
+# Annotate government shutdown gap
+fig2.add_vline(x="2025-10-01", line_dash="dot", line_color="red", opacity=0.5)
+fig2.add_annotation(
+    x="2025-10-01", y=mom["pct_change"].max() * 0.9,
+    text="Data gap\n(Govt shutdown)",
+    showarrow=False,
+    font=dict(size=10, color="red"),
+    textangle=-90, xanchor="left"
+)
+
 st.plotly_chart(fig2, use_container_width=True)
 
-st.caption(f"Data: {df['date'].min().strftime('%b %Y')} – {df['date'].max().strftime('%b %Y')}")
+# ---- Summary Stats Table ----
+st.subheader("📋 Summary Statistics")
+st.caption(f"Monthly % change statistics for: {series_choice}")
+
+avg   = mom["pct_change"].mean()
+best  = mom.loc[mom["pct_change"].idxmax()]
+worst = mom.loc[mom["pct_change"].idxmin()]
+total = ((df[df["series_name"]==series_choice].sort_values("date")["value"].iloc[-1] /
+          df[df["series_name"]==series_choice].sort_values("date")["value"].iloc[0]) - 1) * 100
+positive_months = (mom["pct_change"] > 0).sum()
+negative_months = (mom["pct_change"] < 0).sum()
+
+col1, col2, col3, col4, col5 = st.columns(5)
+with col1:
+    st.metric("Avg Monthly Change", f"{avg:+.3f}%")
+with col2:
+    st.metric("Best Month", f"{best['pct_change']:+.3f}%",
+              best["date"].strftime("%b %Y"))
+with col3:
+    st.metric("Worst Month", f"{worst['pct_change']:+.3f}%",
+              worst["date"].strftime("%b %Y"))
+with col4:
+    st.metric("Total Change", f"{total:+.2f}%",
+              "since Jan 2024")
+with col5:
+    st.metric("Months Up / Down", f"{positive_months} / {negative_months}")].max().strftime('%b %Y')}")
